@@ -5,6 +5,9 @@ script:
   - "npm run build"
   - "npm run test:nowatch"
 
+before_deploy:
+  - gem install faraday -v 2.8.1
+  - gem install faraday-net_http -v 3.0.2
 
 deploy:
   provider: heroku
