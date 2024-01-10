@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - 14.12.3
+script:
+  - "npm run build"
+  - "npm run test:nowatch"
+
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_TOKEN
+  app: "bookstoreclient"
+  on:
+    branch: main
+
