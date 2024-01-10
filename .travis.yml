@@ -9,7 +9,7 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_TOKEN
-  app: "bookstoreclient"
+  app: "bookstoreclient-demo"
   on:
     branch: main
 
